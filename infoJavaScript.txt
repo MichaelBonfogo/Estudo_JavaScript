@@ -312,14 +312,251 @@ Exemplo
 <script src="myScript1.js"></script>
 
 ------------------------------------------------------------------------
-Saída JS
+Saída JS - Saída de JavaScript
+
+Possibilidades de exibição de JavaScript
+JavaScript pode "exibir" dados de maneiras diferentes:
+
+Escrevendo em um elemento HTML, usando innerHTML.
+Escrevendo na saída HTML usando document.write().
+Escrevendo em uma caixa de alerta, usando window.alert().
+Escrevendo no console do navegador, usando console.log().
+
+Usando innerHTML
+Para acessar um elemento HTML, JavaScript pode usar o document.getElementById(id) método.
+O id atributo define o elemento HTML. A innerHTML propriedade define o conteúdo HTML:
+
+Exemplo
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+</body>
+</html>
+
+Alterar a propriedade innerHTML de um elemento HTML é uma maneira comum de exibir dados em HTML.
+
+
+Usando document.write ()
+Para fins de teste, é conveniente usar document.write():
+
+Exemplo:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+document.write(5 + 6);
+</script>
+
+</body>
+</html>
+
+
+Usar document.write () após o carregamento de um documento HTML excluirá todos os HTML existentes:
+
+Exemplo:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+</body>
+</html>
+
+O método document.write () deve ser usado apenas para teste.
+
+Usando window.alert ()
+Você pode usar uma caixa de alerta para exibir dados:
+
+Exemplo
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+window.alert(5 + 6);
+</script>
+
+</body>
+</html>
+
+Você pode pular a window palavra - chave.
+Em JavaScript, o objeto de janela é o objeto de escopo global, o que significa que variáveis, propriedades e métodos, por padrão, pertencem ao objeto de janela. Isso também significa que especificar a windowpalavra-chave é opcional:
+
+Exemplo
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+alert(5 + 6);
+</script>
+
+</body>
+</html>
+
+Usando console.log ()
+Para fins de depuração, você pode chamar o console.log() método no navegador para exibir dados.
+Você aprenderá mais sobre depuração em um capítulo posterior.
+
+Exemplo
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+console.log(5 + 6);
+</script>
+
+</body>
+</html>
+
+
+Impressão JavaScript
+ JavaScript não possui nenhum objeto de impressão ou método de impressão.
+ Você não pode acessar dispositivos de saída de JavaScript.
+ A única exceção é que você pode chamar o window.print() método no navegador para imprimir o conteúdo da janela atual.
+
+Exemplo
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html>
 
 ------------------------------------------------------------------------
 Declarações JS
 
-------------------------------------------------------------------------
-Sintaxe JS
+Exemplo
+var x, y, z;    // Statement 1
+x = 5;          // Statement 2
+y = 6;          // Statement 3
+z = x + y;      // Statement 4
 
+Programas JavaScript
+ Um programa de computador é uma lista de "instruções" a serem "executadas" por um computador.
+ Em uma linguagem de programação, essas instruções de programação são chamadas de instruções .
+ Um programa JavaScript é uma lista de instruções de programação .
+ Em HTML, os programas JavaScript são executados pelo navegador da web.
+
+Declarações de JavaScript
+ As instruções JavaScript são compostas de:
+ Valores, operadores, expressões, palavras-chave e comentários.
+
+Esta declaração instrui o navegador a escrever "Hello Dolly". dentro de um elemento HTML com id = "demo":
+
+Exemplo
+document.getElementById("demo").innerHTML = "Hello Dolly.";
+
+Exemplo:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>In HTML, JavaScript statements are executed by the browser.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello Dolly.";
+</script>
+
+</body>
+</html>
+
+A maioria dos programas JavaScript contém muitas instruções JavaScript.
+As instruções são executadas, uma a uma, na mesma ordem em que são escritas.
+Os programas JavaScript (e as instruções JavaScript) costumam ser chamados de código JavaScript.
+
+Ponto e vírgula;
+ Os pontos-e-vírgulas separam as instruções JavaScript.
+ Adicione um ponto e vírgula no final de cada instrução executável:
+
+var a, b, c;     // Declare 3 variables
+a = 5;           // Assign the value 5 to a
+b = 6;           // Assign the value 6 to b
+c = a + b;       // Assign the sum of a and b to c
+
+Quando separados por ponto e vírgula, várias instruções em uma linha são permitidas:
+
+a = 5; b = 6; c = a + b;
+
+Na web, você pode ver exemplos sem ponto-e-vírgula.
+Terminar instruções com ponto e vírgula não é obrigatório, mas altamente recomendado.
+
+JavaScript White Space
+ JavaScript ignora vários espaços. Você pode adicionar um espaço em branco ao seu script para torná-lo mais legível.
+
+As seguintes linhas são equivalentes:
+
+var person = "Hege";
+var person="Hege";
+Uma boa prática é colocar espaços ao redor dos operadores (= + - * /):
+
+var x = y + z;
+
+Comprimento de linha JavaScript e quebras de linha
+Para melhor legibilidade, os programadores geralmente gostam de evitar linhas de código com mais de 80 caracteres.
+
+Se uma instrução JavaScript não couber em uma linha, o melhor lugar para quebrá-la é depois de um operador:
+
+Exemplo
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+
+
+Blocos de código JavaScript
+ As instruções JavaScript podem ser agrupadas em blocos de código, entre chaves {...}.
+ O objetivo dos blocos de código é definir instruções a serem executadas juntas.
+ Um lugar onde você encontrará instruções agrupadas em blocos é nas funções JavaScript:
+
+Exemplo
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+
+Neste tutorial, usamos 2 espaços de indentação para blocos de código.
+Você aprenderá mais sobre as funções posteriormente neste tutorial.
+
+Palavras-chave JavaScript
+As instruções JavaScript geralmente começam com uma palavra - chave para identificar a ação JavaScript a ser executada.
+
+Visite nossa referência de Palavras reservadas para ver uma lista completa de palavras-chave JavaScript .
+Palavras-chave JavaScript são palavras reservadas. Palavras reservadas não podem ser usadas como nomes de variáveis.
+------------------------------------------------------------------------
+Sintaxe JS - Sintaxe JavaScript
+
+ A sintaxe JavaScript é o conjunto de regras, como os programas JavaScript são construídos:
 ------------------------------------------------------------------------
 Comentários JS
 
