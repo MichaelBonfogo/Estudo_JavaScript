@@ -3,11 +3,313 @@ Tutorial JS
 
 JS HOME
 
+ Tutorial de JavaScript
+ JavaScript é a linguagem de programação mais popular do mundo.
+ JavaScript é a linguagem de programação da web.
+ JavaScript é fácil de aprender.
+ Este tutorial ensinará JavaScript do básico ao avançado.
+
+Exemplo:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
+Por que estudar JavaScript?
+ JavaScript é uma das 3 linguagens que todos os desenvolvedores da web devem aprender:
+
+   1. HTML para definir o conteúdo das páginas da web
+
+   2. CSS para especificar o layout das páginas da web
+
+   3. JavaScript para programar o comportamento das páginas da web
+
+ Este tutorial cobre todas as versões do JavaScript:
+  O JavaScript original ES1 ES2 ES3 (1997-1999)
+  A primeira revisão principal ES5 (2009)
+  A segunda revisão ES6 (2015)
+  As adições anuais (2016, 2017, 2018)
+
 ------------------------------------------------------------------------
 Introdução JS
 
+Introdução ao JavaScript
+ Esta página contém alguns exemplos do que o JavaScript pode fazer.
+  
+ JavaScript pode alterar o conteúdo HTML
+ Um dos muitos métodos HTML JavaScript é getElementById().
+
+O exemplo abaixo "encontra" um elemento HTML (com id = "demo") e altera o conteúdo do elemento (innerHTML) para "Hello JavaScript":
+
+Exemplo
+document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+Exemplo:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+</body>
+</html>
+
+ JavaScript aceita aspas duplas e simples:
+
+ JavaScript pode alterar valores de atributos de HTML
+ Neste exemplo, JavaScript altera o valor do src atributo (fonte) de uma <img>tag:
+
+ Exemplo:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+</body>
+</html>
+
+
+JavaScript pode alterar estilos HTML (CSS)
+Alterar o estilo de um elemento HTML é uma variante da alteração de um atributo HTML:
+
+Exemplo
+document.getElementById("demo").style.fontSize = "35px";
+
+Exemplo: 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
+
+</body>
+</html> 
+
+
+JavaScript pode ocultar elementos HTML
+Ocultar elementos HTML pode ser feito alterando o displayestilo:
+
+Exemplo
+document.getElementById("demo").style.display = "none";
+
+Exemplo
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
+
+</body>
+</html> 
+
+
+JavaScript pode mostrar elementos HTML
+Mostrar elementos HTML ocultos também pode ser feito alterando o displayestilo:
+
+Exemplo
+document.getElementById("demo").style.display = "block";
+
+Exemplo: 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+</body>
+</html> 
+
+Você sabia?
+ JavaScript e Java são linguagens completamente diferentes, tanto em conceito quanto em design.
+ JavaScript foi inventado por Brendan Eich em 1995 e se tornou um padrão ECMA em 1997.
+ ECMA-262 é o nome oficial do padrão. ECMAScript é o nome oficial do idioma.
+
 ------------------------------------------------------------------------
-JS para onde
+JS para onde - JavaScript para onde
+
+A tag <script>
+Em HTML, o código JavaScript é inserido entre as tags <script>e </script>.
+
+Exemplo:
+
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+
+ Os exemplos antigos de JavaScript podem usar um atributo de tipo: <script type = "text / javascript">.
+ O atributo type não é obrigatório. JavaScript é a linguagem de script padrão em HTML.
+
+
+Funções e eventos JavaScript
+ Um JavaScript function é um bloco de código JavaScript que pode ser executado quando "chamado".
+ Por exemplo, uma função pode ser chamada quando ocorre um evento, como quando o usuário clica em um botão.
+
+JavaScript em <head> ou <body>
+ Você pode colocar qualquer número de scripts em um documento HTML.
+ Os scripts podem ser colocados na <body>, ou na <head> seção de uma página HTML, ou em ambas.
+
+JavaScript em <head>
+ Neste exemplo, um JavaScript function é colocado na <head> seção de uma página HTML.
+
+A função é invocada (chamada) quando um botão é clicado:
+
+Exemplo:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+<body>
+
+<h1>A Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+</html>
+
+
+JavaScript em <body>
+ Neste exemplo, um JavaScript function é colocado na <body> seção de uma página HTML.
+ A função é invocada (chamada) quando um botão é clicado:
+
+Exemplo:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>A Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+</html>
+
+Colocar scripts na parte inferior do elemento <body> melhora a velocidade de exibição, porque a interpretação do script torna a exibição mais lenta.
+
+JavaScript externo
+ Os scripts também podem ser colocados em arquivos externos:
+
+Arquivo externo: myScript.js
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+
+ Os scripts externos são práticos quando o mesmo código é usado em muitas páginas da web diferentes.
+ Os arquivos JavaScript têm a extensão de arquivo .js .
+ Para usar um script externo, coloque o nome do arquivo de script no src atributo (fonte) de uma <script>tag:
+
+Exemplo
+<script src="myScript.js"></script>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>(myFunction is stored in an external file called "myScript.js")</p>
+
+<script src="myScript.js"></script>
+
+</body>
+</html>
+
+
+ Você pode colocar uma referência de script externa em <head> ou <body>como desejar.
+ O script se comportará como se estivesse localizado exatamente onde a <script>tag está localizada.
+ Os scripts externos não podem conter <script>tags.
+
+
+ Vantagens do JavaScript externo
+  Colocar scripts em arquivos externos tem algumas vantagens:
+  Ele separa HTML e código
+  Isso torna o HTML e o JavaScript mais fáceis de ler e manter
+  Arquivos JavaScript em cache podem acelerar o carregamento da página
+  Para adicionar vários arquivos de script a uma página - use várias tags de script:
+
+Exemplo
+<script src="myScript1.js"></script>
+<script src="myScript2.js"></script>
+
+ Referências Externas
+  Os scripts externos podem ser referenciados com um URL completo ou com um caminho relativo à página da web atual.
+
+Este exemplo usa um URL completo para vincular a um script:
+
+Exemplo
+<script src="https://www.w3schools.com/js/myScript1.js"></script>
+
+Este exemplo usa um script localizado em uma pasta especificada no site atual:
+
+Exemplo
+<script src="/js/myScript1.js"></script>
+
+Este exemplo está vinculado a um script localizado na mesma pasta da página atual:
+
+Exemplo
+<script src="myScript1.js"></script>
 
 ------------------------------------------------------------------------
 Saída JS
